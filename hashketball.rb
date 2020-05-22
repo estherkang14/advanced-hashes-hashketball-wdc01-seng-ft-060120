@@ -151,7 +151,6 @@ end
 def team_colors(team_name)
   game_hash.each do |home_or_away, team_data|
     team_data.each do |main_key, key_data|
-      binding.pry 
      if key_data == team_name
        return team_data[:colors]
      end 
@@ -174,6 +173,7 @@ def player_numbers(team_name)
       if team_name == key_data
         team_data[:players].map do |player_data|
           jersey_numbers << player_data[:number]
+          binding.pry 
         end
       end
     end 
