@@ -173,7 +173,6 @@ def player_numbers(team_name)
       if team_name == key_data
         team_data[:players].map do |player_data|
           jersey_numbers << player_data[:number]
-          binding.pry 
         end
       end
     end 
@@ -186,6 +185,7 @@ def player_stats(player_name)
 player_stat_out = { }
   game_hash.each do |home_or_away, team_data|
    team_data[:players].each do |player|
+     binding.pry
       if player_name == player[:player_name]
         player_stat_out.merge!(player)
       end
